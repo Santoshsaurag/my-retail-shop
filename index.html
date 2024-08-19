@@ -27,18 +27,18 @@
     
     <script src="genesys.js"></script>
     <script src="retail.js"></script>
+
+    
 <button type="button" id="custom-launcher" onclick="toggleMessenger()">
   Messenger
 </button>
-
-
+<script>
 
     
-   <script type="text/javascript">
-         function toggleMessenger(){
- 
+  function toggleMessenger()
+    {
        
-Genesys("command", "CobrowseService.acceptSession", {}
+Genesys("command", "CobrowseService.acceptSession", {
     },   
     // fulfilled callback   
     () => {
@@ -49,6 +49,7 @@ Genesys("command", "CobrowseService.acceptSession", {}
       console.log("could not accept Co-browse session, error code: ", err.code);
     }
 );
+
 
 </script>
 
