@@ -30,26 +30,26 @@
 <button type="button" id="custom-launcher" onclick="toggleMessenger()">
   Messenger
 </button>
-   <script type="text/javascript">
- //function toggleMessenger(){
-   // Genesys("command", "MessagingService.cobrowseOffer", {},
-     // function(o){},  // if resolved
-     // function(o){    // if rejected
-     //   Genesys("command", "Messenger.close");
-     // }
-   // );
-  //}
 
-       {
-    "id": "<event id>", //an identifier(UUID) set in client side for each co-browse event
-    "sessionId": "<co-browse session id>",
-    "sessionJoinToken": "<co-browse session join code>",
-    "type": "Offering"
-}
-function toggleMessenger(){
-       Genesys("subscribe", "MessagingService.cobrowseOffer",
-  console.log(data)
-};
+
+
+    
+   <script type="text/javascript">
+         function toggleMessenger(){
+ 
+       
+Genesys("command", "CobrowseService.acceptSession", {}
+    },   
+    // fulfilled callback   
+    () => {
+      console.log("Co-browse session successfully accepted");
+    },
+    // rejected callback
+    err => {
+      console.log("could not accept Co-browse session, error code: ", err.code);
+    }
+);
+
 </script>
 
 
