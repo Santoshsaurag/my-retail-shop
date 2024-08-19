@@ -32,14 +32,12 @@
 <button type="button" id="custom-launcher" onclick="toggleMessenger()">
   Messenger
 </button>
-<script>
 
-    Genesys("subscribe", "CobrowseService.ready", (e) => console.log("CobrowseService: ready", e)); 
-    
-    function toggleMessenger() {
-       
-Genesys("command", "CobrowseService.acceptSession", {
-    },   
+    Genesys("subscribe", "CobrowseService.ready", (e) => console.log("CobrowseService: ready", e));
+    <script type="text/javascript">   
+
+function toggleMessenger() {     
+Genesys("command", "CobrowseService.acceptSession", {},   
     // fulfilled callback   
     () => {
       console.log("Co-browse session successfully accepted");
