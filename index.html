@@ -23,6 +23,8 @@
     
 </head>
 <body>
+
+    
     <script src="genesys.js"></script>
     <script src="retail.js"></script>
 <button type="button" id="custom-launcher" onclick="toggleMessenger()">
@@ -30,7 +32,7 @@
 </button>
     <script type="text/javascript">
   function toggleMessenger(){
-    Genesys("command", "Messenger.open", {},
+    Genesys("command", "MessagingService.cobrowseOffer", {},
       function(o){},  // if resolved
       function(o){    // if rejected
         Genesys("command", "Messenger.close");
@@ -38,6 +40,10 @@
     );
   }
 </script>
+
+
+
+    
     <header>
         <div class="container">
             <h1>Small Retail Shop</h1>
