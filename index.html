@@ -34,9 +34,9 @@
 </button>
 <script>
 
+    Genesys("subscribe", "CobrowseService.ready", (e) => console.log("CobrowseService: ready", e)); 
     
-  function toggleMessenger()
-    {
+    function toggleMessenger() {
        
 Genesys("command", "CobrowseService.acceptSession", {
     },   
