@@ -38,13 +38,20 @@
     <header>
 
         <div class="container">
+            <section class="chattoagent">
+
+
+           
             <h1>Chat to Agent?</h1>
             <footer>
                 <button type="button" id="custom-launcher" onclick="toggleMessenger()">
                     Messenger
                   </button>
+                </section>
+                </div>
                  </footer>
-                 <script type="text/javascript">
+
+ <script type="text/javascript">
                     function toggleMessenger(){
                       Genesys("command", "Messenger.open", {},
                         function(o){},  // if resolved
@@ -60,6 +67,7 @@
 
 
         <div class="container">
+            <section class="product-list"></section>
             <h1>Small Retail Shop</h1>
             <nav>
                 <ul>
